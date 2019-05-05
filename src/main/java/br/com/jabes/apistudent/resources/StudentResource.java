@@ -1,8 +1,7 @@
 package br.com.jabes.apistudent.resources;
 
-import java.util.List;
-
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Pageable;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.transaction.annotation.Transactional;
@@ -14,10 +13,8 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
-import br.com.jabes.apistudent.erro.CustomErrorType;
 import br.com.jabes.apistudent.erro.ResourceNotFoundException;
 import br.com.jabes.apistudent.model.Student;
 import br.com.jabes.apistudent.repository.StudentRepository;
@@ -35,8 +32,8 @@ public class StudentResource {
 	private StudentRepository sRepository;
 
 	@GetMapping
-	public ResponseEntity<?> listAll(){
-		return new ResponseEntity<>(sRepository.findAll(),HttpStatus.OK);
+	public ResponseEntity<?> listAll(Pageable pageable){
+		return new ResponseEntity<>(sRepository.findAll(pageable),HttpStatus.OK);
 	}
 	
 	@GetMapping( path="/{id}")
