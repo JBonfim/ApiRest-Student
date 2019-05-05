@@ -1,4 +1,4 @@
-package br.com.jabes.apistudant.resources;
+package br.com.jabes.apistudent.resources;
 
 import java.util.List;
 
@@ -17,10 +17,10 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
-import br.com.jabes.apistudant.erro.CustomErrorType;
-import br.com.jabes.apistudant.erro.ResourceNotFoundException;
-import br.com.jabes.apistudant.model.Student;
-import br.com.jabes.apistudant.repository.StudentRepository;
+import br.com.jabes.apistudent.erro.CustomErrorType;
+import br.com.jabes.apistudent.erro.ResourceNotFoundException;
+import br.com.jabes.apistudent.model.Student;
+import br.com.jabes.apistudent.repository.StudentRepository;
 
 
 /**

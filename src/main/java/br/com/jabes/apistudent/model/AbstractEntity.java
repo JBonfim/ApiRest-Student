@@ -1,4 +1,4 @@
-package br.com.jabes.apistudant.model;
+package br.com.jabes.apistudent.model;
 
 import java.io.Serializable;
 

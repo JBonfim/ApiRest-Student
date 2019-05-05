@@ -1,4 +1,4 @@
-package br.com.jabes.apistudant.erro;
+package br.com.jabes.apistudent.erro;
 
 
 public class ErrorDetails {

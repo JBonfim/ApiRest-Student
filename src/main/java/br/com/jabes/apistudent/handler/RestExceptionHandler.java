@@ -1,4 +1,4 @@
-package br.com.jabes.apistudant.handler;
+package br.com.jabes.apistudent.handler;
 
 import java.util.Date;
 
@@ -11,9 +11,9 @@ import org.springframework.web.context.request.WebRequest;
 import org.springframework.web.servlet.mvc.method.annotation.ResponseEntityExceptionHandler;
 import org.springframework.web.util.WebUtils;
 
-import br.com.jabes.apistudant.erro.ErrorDetails;
-import br.com.jabes.apistudant.erro.ResourceNotFoundDetails;
-import br.com.jabes.apistudant.erro.ResourceNotFoundException;
+import br.com.jabes.apistudent.erro.ErrorDetails;
+import br.com.jabes.apistudent.erro.ResourceNotFoundDetails;
+import br.com.jabes.apistudent.erro.ResourceNotFoundException;
 
 @ControllerAdvice
 public class RestExceptionHandler extends ResponseEntityExceptionHandler {

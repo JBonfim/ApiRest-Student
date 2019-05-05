@@ -1,6 +1,6 @@
-package br.com.jabes.apistudant.erro;
+package br.com.jabes.apistudent.erro;
 
-import br.com.jabes.apistudant.erro.ResourceNotFoundDetails.ResouceNotFoundDetailsBuilder;
+import br.com.jabes.apistudent.erro.ResourceNotFoundDetails.ResouceNotFoundDetailsBuilder;
 
 
 /**

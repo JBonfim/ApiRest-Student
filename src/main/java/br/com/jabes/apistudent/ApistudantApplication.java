@@ -1,4 +1,4 @@
-package br.com.jabes.apistudant;
+package br.com.jabes.apistudent;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

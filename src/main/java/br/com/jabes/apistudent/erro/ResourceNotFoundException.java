@@ -1,4 +1,4 @@
-package br.com.jabes.apistudant.erro;
+package br.com.jabes.apistudent.erro;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.ResponseStatus;
