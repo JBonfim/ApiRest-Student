@@ -9,6 +9,11 @@ import org.springframework.web.method.support.HandlerMethodArgumentResolver;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;
 
 
+/**
+ * @author Jabes
+ *Modificando a quantidade de itens retonado ao realizar uma requisição com varias paginações
+ *foi definido para retornar 5 itens por requisição
+ */
 @Configuration
 public class ApiStudentAdapter extends WebMvcConfigurerAdapter {
 
