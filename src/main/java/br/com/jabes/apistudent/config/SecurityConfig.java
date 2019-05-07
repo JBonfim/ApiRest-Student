@@ -20,8 +20,10 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 	@Override
 	protected void configure(HttpSecurity http) throws Exception {
 		// TODO Auto-generated method stub
+		//.anyRequest().authenticated()
 		http.authorizeRequests()
-		.anyRequest().authenticated()
+		.antMatchers("/*/protected/**").hasRole("USER")
+		.antMatchers("/*/admin/**").hasRole("ADMIN")
 		.and()
 		.httpBasic()
 		.and()
@@ -35,12 +37,4 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 		
 	}
 	
-//	@Autowired
-//	public void configureGlobal(AuthenticationManagerBuilder managerBuilder) throws Exception{
-//		managerBuilder.inMemoryAuthentication()
-//		.withUser("jabes").password("1234").roles("USER")
-//		.and()
-//		.withUser("admin").password("1234").roles("USER","ADMIN");
-//		
-//	}
 }

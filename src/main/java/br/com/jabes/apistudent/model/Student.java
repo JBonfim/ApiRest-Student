@@ -46,6 +46,11 @@ public class Student extends AbstractEntity {
 		this.name = name;
 	}
 	
+	@Override
+	public String toString() {
+		// TODO Auto-generated method stub
+		return "[Name: "+name+", email: "+email+"]";
+	}
 	
 	
 }

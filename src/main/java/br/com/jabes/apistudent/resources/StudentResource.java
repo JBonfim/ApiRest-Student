@@ -26,39 +26,37 @@ import br.com.jabes.apistudent.repository.StudentRepository;
  *
  */
 @RestController
-@RequestMapping("/students")
+@RequestMapping("v1")
 public class StudentResource {
 	
 	@Autowired
 	private StudentRepository sRepository;
 
-	@GetMapping
+	@GetMapping(path="protected/students")
 	public ResponseEntity<?> listAll(Pageable pageable){
 		return new ResponseEntity<>(sRepository.findAll(pageable),HttpStatus.OK);
 	}
 	
-	@GetMapping( path="/{id}")
+	@GetMapping( path="protected/students/{id}")
 	public ResponseEntity<?> getStudentById(@PathVariable("id") long id){
 		verifyIfStudentExists(id);
 		Student student = sRepository.findById(id);
 		return new ResponseEntity<>(student,HttpStatus.OK);
 	}
 	
-	@PostMapping
-	@Transactional
+	@PostMapping(path="admin/students")
 	public ResponseEntity<?> save(@Validated @RequestBody Student student){
 		sRepository.save(student);
 		return new ResponseEntity<>(student,HttpStatus.OK);
 	}
-	@DeleteMapping
-	@PreAuthorize("hasRole('ADMIN')")
+	@DeleteMapping(path="admin/students")
 	public ResponseEntity<?> delete(@RequestBody Student student){
 		verifyIfStudentExists(student.getId());
 		sRepository.delete(student);
 		return new ResponseEntity<>(HttpStatus.OK);
 	}
 	
-	@PutMapping
+	@PutMapping(path="admin/students")
 	public ResponseEntity<?> update(@RequestBody Student student){
 		verifyIfStudentExists(student.getId());
 		sRepository.save(student);
