@@ -1,4 +1,4 @@
-package br.com.jabes.apistudant;
+package br.com.jabes.apistudent;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;

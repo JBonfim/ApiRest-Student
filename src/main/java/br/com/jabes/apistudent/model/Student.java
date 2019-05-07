@@ -37,6 +37,14 @@ public class Student extends AbstractEntity {
 	public Student() {
 		// TODO Auto-generated constructor stub
 	}
+	
+	public Student(String name, String email) {
+		// TODO Auto-generated constructor stub
+		this.name = name;
+		this.email = email;
+	}
+	
+	
 
 	public String getName() {
 		return name;
