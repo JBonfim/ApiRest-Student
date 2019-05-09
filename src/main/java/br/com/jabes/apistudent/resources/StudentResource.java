@@ -49,10 +49,10 @@ public class StudentResource {
 		sRepository.save(student);
 		return new ResponseEntity<>(student,HttpStatus.OK);
 	}
-	@DeleteMapping(path="admin/students")
-	public ResponseEntity<?> delete(@RequestBody Student student){
-		verifyIfStudentExists(student.getId());
-		sRepository.delete(student);
+	@DeleteMapping(path="admin/students/{id}")
+	public ResponseEntity<?> delete(@PathVariable(name="id") long id){
+		verifyIfStudentExists(id);
+		sRepository.delete(id);
 		return new ResponseEntity<>(HttpStatus.OK);
 	}
 	
